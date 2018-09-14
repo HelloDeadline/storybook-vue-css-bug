@@ -5,7 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "serve:storybook": "vue-cli-service serve:storybook -p 6006 -c config/storybook",
+    "build:storybook": "vue-cli-service build:storybook -c config/storybook",
+    "serve:build:story": "http-server ./storybook-static -p 3434 -d false"
   },
   "dependencies": {
     "vue": "^2.5.17",
@@ -13,13 +16,27 @@
     "vue-property-decorator": "^7.0.0"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "4.0.0-alpha.20",
+    "@storybook/addon-links": "4.0.0-alpha.20",
+    "@storybook/addon-notes": "4.0.0-alpha.20",
+    "@storybook/addons": "4.0.0-alpha.20",
+    "@storybook/channel-postmessage": "4.0.0-alpha.20",
+    "@storybook/channels": "4.0.0-alpha.20",
+    "@storybook/client-logger": "4.0.0-alpha.20",
+    "@storybook/components": "4.0.0-alpha.20",
+    "@storybook/core": "4.0.0-alpha.20",
+    "@storybook/core-events": "4.0.0-alpha.20",
+    "@storybook/node-logger": "4.0.0-alpha.20",
+    "@storybook/ui": "4.0.0-alpha.20",
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-plugin-typescript": "^3.0.0",
     "@vue/cli-service": "^3.0.0",
+    "http-server": "^0.11.1",
     "lint-staged": "^7.2.2",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "typescript": "^3.0.0",
+    "vue-cli-plugin-storybook": "^0.4.7",
     "vue-template-compiler": "^2.5.17"
   },
   "browserslist": [
